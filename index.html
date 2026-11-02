@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,64 +9,58 @@
 <style>
 
 *{
-box-sizing:border-box;
 margin:0;
 padding:0;
+box-sizing:border-box;
 }
 
 body{
-font-family:Arial,sans-serif;
+font-family:Inter,Arial,sans-serif;
 background:#050816;
 color:white;
+overflow-x:hidden;
 }
 
 .hero{
-background:linear-gradient(135deg,#060616,#120a2b,#1e1b4b);
-padding:60px 30px;
+background:linear-gradient(135deg,#050816 0%,#12062d 50%,#1f1147 100%);
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:80px 8%;
 }
 
 .hero-container{
 max-width:1400px;
+width:100%;
 margin:auto;
-display:flex;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
 align-items:center;
-justify-content:space-between;
-gap:50px;
-flex-wrap:wrap;
-}
-
-.hero-left{
-flex:1;
-min-width:350px;
-}
-
-.hero-right{
-flex:1;
-min-width:350px;
-text-align:center;
 }
 
 .logo{
-width:120px;
+width:90px;
 margin-bottom:20px;
 }
 
 h1{
-font-size:72px;
-margin-bottom:25px;
-line-height:1.1;
+font-size:clamp(48px,6vw,92px);
+line-height:1.05;
+margin-bottom:30px;
 }
 
 .gradient{
-background:linear-gradient(90deg,#9333ea,#38bdf8);
+background:linear-gradient(90deg,#8b5cf6,#38bdf8);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
-.subtitle{
-font-size:24px;
-line-height:1.6;
-color:#dcdcdc;
+.description{
+font-size:22px;
+line-height:1.7;
+color:#d6d6d6;
+max-width:700px;
 margin-bottom:35px;
 }
 
@@ -77,55 +71,33 @@ flex-wrap:wrap;
 }
 
 .install-btn{
-background:linear-gradient(90deg,#9333ea,#38bdf8);
-padding:18px 35px;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:18px 34px;
 border-radius:14px;
-text-decoration:none;
+background:linear-gradient(90deg,#9333ea,#38bdf8);
 color:white;
-font-size:20px;
-font-weight:bold;
+font-weight:700;
+font-size:18px;
+text-decoration:none;
 }
 
 .copy-btn{
-border:2px solid rgba(255,255,255,0.4);
-padding:18px 35px;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:18px 34px;
 border-radius:14px;
-text-decoration:none;
+border:1px solid rgba(255,255,255,0.3);
 color:white;
-font-size:20px;
-font-weight:bold;
-}
-
-.mockup{
-width:100%;
-border-radius:20px;
-}
-
-@media(max-width:900px){
-
-h1{
-font-size:42px;
-}
-
-.subtitle{
-font-size:18px;
-}
-
-.hero{
-padding:30px 20px;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-<div class="hero">
+font-weight:700;
+font-size:18px
+ <section class="hero">
 
 <div class="hero-container">
 
-<div class="hero-left">
+<div>
 
 <img
 class="logo"
@@ -137,9 +109,9 @@ right inside
 <span class="gradient">Stremio.</span>
 </h1>
 
-<p class="subtitle">
-NitroVision automatically checks whether the movie or TV show selected through Stremio is available through supported legal streaming providers.
-Choose a provider you already subscribe to and NitroVision opens that provider directly.
+<p class="description">
+NitroVision helps you discover where movies and TV shows are legally available to stream.
+Quickly find supported providers such as Netflix, Prime Video, Disney+, Max, Apple TV+ and more.
 </p>
 
 <div class="button-row">
@@ -162,7 +134,7 @@ Copy Link
 
 </div>
 
-<div class="hero-right">
+<div>
 
 <img
 class="mockup"
@@ -172,197 +144,54 @@ src="NitroVision Legal Streaming Add-on landing page concept-RAW.png">
 
 </div>
 
-</div>
-<section style="max-width:1400px;margin:auto;padding:20px;">
+</section> 
+  <section class="providers">
 
-<div style="
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-padding:25px;
-border:1px solid rgba(255,255,255,0.15);
-border-radius:20px;
-background:rgba(255,255,255,0.03);
-margin-bottom:40px;
-">
+<div class="provider-strip">
 
-<span>Netflix</span>
-<span>Prime Video</span>
-<span>Disney+</span>
-<span>Max</span>
-<span>Apple TV+</span>
-<span>Paramount+</span>
-<span>and more...</span>
-
-</div>
-
-<div style="
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-align-items:start;
-">
-  
-<div style="
-padding:30px;
-border-radius:20px;
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(147,51,234,0.4);
-">
-<h2>Checks legal availability</h2>
-<br>
-<p>
-Automatically looks for movies and TV series using trusted provider data.
-</p>
-</div>
-
-<div style="
-padding:30px;
-border-radius:20px;
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(147,51,234,0.4);
-">
-<h2>Use services you subscribe to</h2>
-<br>
-<p>
-See which providers offer the title and select a service you already use.
-</p>
-</div>
-
-<div style="
-padding:30px;
-border-radius:20px;
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(147,51,234,0.4);
-">
-<h2>Opens the provider directly</h2>
-<br>
-<p>
-Launch the provider app or website and continue watching there.
-</p>
-<section style="
-max-width:1200px;
-margin:auto;
-padding:20px;
-">
-
-<h2 style="
-text-align:center;
-font-size:42px;
-margin-bottom:50px;">
-How NitroVision Works
-</h2>
-
-<div style="
-display:flex;
-gap:25px;
-flex-wrap:wrap;
-justify-content:center;
-">
-
-<div style="
-padding:30px;
-background:rgba(255,255,255,0.05);
-border-radius:20px;
-">
-<h3>Step 1</h3>
-<br>
-<p>
-Open any movie or TV series inside Stremio.
-</p>
-</div>
-
-<div style="
-padding:30px;
-background:rgba(255,255,255,0.05);
-border-radius:20px;
-">
-<h3>Step 2</h3>
-<br>
-<p>
-NitroVision checks legal streaming providers automatically.
-</p>
-</div>
-
-<div style="
-padding:30px;
-background:rgba(255,255,255,0.05);
-border-radius:20px;
-">
-<h3>Step 3</h3>
-<br>
-<p>
-Choose your provider and continue watching through the official service.
-</p>
-</div>
+<div class="provider">Netflix</div>
+<div class="provider">Prime Video</div>
+<div class="provider">Disney+</div>
+<div class="provider">Max</div>
+<div class="provider">Apple TV+</div>
+<div class="provider">Paramount+</div>
+<div class="provider">More...</div>
 
 </div>
 
 </section>
+ <section class="cards">
 
-<section style="
-max-width:1200px;
-margin:auto;
-padding:40px 20px 100px 20px;
-">
-
-<div style="
-display:grid;
-grid-template-columns:1fr;
-gap:20px;
-">
-
-<div style="
-padding:25px;
-background:rgba(255,255,255,0.05);
-border-radius:20px;
-">
-<h3>Is NitroVision free?</h3>
-<br>
+<div class="card">
+<h3>Find Content</h3>
 <p>
-Yes. NitroVision is free to install and use.
+Instantly discover where films and TV shows are legally available across major streaming platforms.
 </p>
 </div>
 
-<div style="
-padding:25px;
-background:rgba(255,255,255,0.05);
-border-radius:20px;
-">
-<h3>Does NitroVision stream content?</h3>
-<br>
+<div class="card">
+<h3>Choose Provider</h3>
 <p>
-No. NitroVision helps you discover legal streaming providers. It does not host or stream content.
+See supported providers including Netflix, Prime Video, Disney+, Max, Apple TV+ and more.
 </p>
 </div>
 
-<div style="
-padding:25px;
-background:rgba(255,255,255,0.05);
-border-radius:20px;
-">
-<h3>Which providers are supported?</h3>
-<br>
+<div class="card">
+<h3>Start Watching</h3>
 <p>
-Netflix, Prime Video, Disney+, Max, Apple TV+, Paramount+ and many more depending on your region.
+Open the provider you've chosen and continue watching through the official service.
 </p>
-</div>
-
 </div>
 
 </section>
 
-<footer style="
-text-align:center;
-padding:40px;
-border-top:1px solid rgba(255,255,255,0.1);
-color:#b8b8b8;
-">
+<footer>
 
-NitroVision © 2026
+NitroVision © 2026<br><br>
+
+Legal streaming discovery for Stremio users.
 
 </footer>
 
 </body>
-</html>
+</html> 
