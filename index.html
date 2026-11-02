@@ -1,41 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>NitroVision</title>
 
 <style>
+
 body{
-    margin:0;
-    background:#050816;
+margin:0;
+background:#050816;
+}
+
+.wrapper{
+position:relative;
+width:100%;
 }
 
 .hero{
-    width:100%;
-    height:auto;
-    display:block;
+width:100%;
+display:block;
 }
 
-.buttons{
-    text-align:center;
-    padding:30px;
+.install{
+position:absolute;
+left:4%;
+top:66%;
+width:31%;
+height:8%;
+display:block;
+z-index:100;
+cursor:pointer;
 }
 
-.button{
-    display:inline-block;
-    margin:10px;
-    padding:15px 30px;
-    background:#8a2be2;
-    color:white;
-    text-decoration:none;
-    border-radius:10px;
-    font-family:Arial;
-    font-size:20px;
+.copy{
+position:absolute;
+left:38%;
+top:66%;
+width:19%;
+height:8%;
+display:block;
+z-index:100;
+cursor:pointer;
 }
+
 </style>
-
 </head>
 
 <body>
 
-<img class="hero" src="NitroVision Legal Streaming Add-on landing page concept-RAW.png">
+<div class="wrapper">
 
+<img
+class="hero"
+src="NitroVision Legal Streaming Add-on landing page concept-RAW.png">
+
+<a
+class="install"
+href="https://b4c0be0d68c2-nitrovision-addon.baby-beamup.club/"
+target="_blank">
+</a>
+
+<a
+class="copy"
+href="#"
+onclick="navigator.clipboard.writeText('https://b4c0be0d68c2-nitrovision-addon.baby-beamup.club/manifest.json');alert('Addon URL copied');return false;">
+</a>
+
+</div>
+
+</body>
+</html>
