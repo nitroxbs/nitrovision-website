@@ -300,6 +300,17 @@
       word-break: break-all;
     }
     .beta .install-btn { margin: 6px 0 18px; }
+    .dl-code {
+      display: inline-block;
+      margin: 4px 0 18px;
+      padding: 14px 26px;
+      border-radius: 18px;
+      background: rgba(0, 0, 0, .35);
+      border: 2px solid rgba(245, 158, 11, .6);
+      text-align: center;
+    }
+    .dl-code span { display: block; font-size: 15px; color: #fde68a; margin-bottom: 4px; }
+    .dl-code strong { font-family: Consolas, monospace; font-size: 44px; letter-spacing: 4px; color: #fcd34d; }
 
     /* ---------- Wave footer ---------- */
     .wave { display: block; width: 100%; height: 150px; margin-top: 40px; }
@@ -445,12 +456,14 @@
         Download Beta APK
       </a>
       <p><strong>Install it with Downloader:</strong></p>
+      <div class="dl-code"><span>Downloader code</span><strong>6963558</strong></div>
       <ol>
         <li>On your Google TV, install the free <strong>Downloader</strong> app from the Play Store.</li>
         <li>Allow it to install apps: Settings → Apps → Security &amp; restrictions → Unknown sources → turn on Downloader. (On some TVs you need to turn on Developer options first.)</li>
-        <li>Open Downloader and enter <code>https://nitroxbs.github.io/nitrovision-website/nitrovision-tv.apk</code></li>
+        <li>Open Downloader, type the code <strong>6963558</strong> and press Go. The download starts on its own.</li>
         <li>Choose Install when the download finishes, then open NitroVision TV from your apps.</li>
       </ol>
+      <p>If the code doesn't work, type this address into Downloader instead: <code>https://nitroxbs.github.io/nitrovision-website/nitrovision-tv.apk</code></p>
       <p>NitroVision TV is an independent app. It uses Stremio's open-source add-on protocol to load the NitroVision add-on, but it isn't made by, endorsed by or affiliated with Stremio. Like the add-on, it only links to legal services you already have.</p>
     </section>
 
