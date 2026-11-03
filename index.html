@@ -145,7 +145,7 @@
     /* ---------- Catalog rows section ---------- */
     .catalog-rows {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
       margin-top: 20px;
     }
@@ -159,6 +159,12 @@
 
     .catalog-card h3 { font-size: 22px; margin-bottom: 10px; color: #7dd3fc; }
     .catalog-card p { color: #dcdcea; font-size: 17px; line-height: 1.45; }
+
+    .catalog-card.live {
+      background: linear-gradient(160deg, rgba(236, 72, 153, .18), rgba(30, 20, 90, .35));
+      border: 1px solid rgba(236, 72, 153, .4);
+    }
+    .catalog-card.live h3 { color: #f9a8d4; }
 
     /* ---------- How it works ---------- */
     .how-title {
@@ -266,13 +272,13 @@
       <div>
         <div class="brand">
           <img class="logo" src="https://raw.githubusercontent.com/nitroxbs/NitroVision-Logo/main/Nitro_Vision_Logo_noBG.png" alt="NitroVision logo">
-          <div class="brand-name">Nitro<span class="gradient">Vision</span><span class="version-tag">v1.3.0</span></div>
+          <div class="brand-name">Nitro<span class="gradient">Vision</span><span class="version-tag">v1.4.0</span></div>
         </div>
 
         <h1>Legal streaming options,<br>right inside <span class="gradient">Stremio.</span></h1>
 
         <p class="description">
-          NitroVision automatically checks whether the movie or TV show selected through Stremio is available through supported legal streaming providers across the countries you choose. Pick the services you already subscribe to, and NitroVision opens that provider's app or website directly — plus adds personalized trending catalogs to your Stremio home screen.
+          NitroVision automatically checks whether the movie or TV show selected through Stremio is available through supported legal streaming providers across the countries you choose. Pick the services you already subscribe to, and NitroVision opens that provider's app or website directly — plus adds personalized trending catalogs and live public-broadcaster TV channels to your Stremio home screen.
         </p>
 
         <div class="button-row">
@@ -302,6 +308,8 @@
       <div class="provider">Apple TV+</div>
       <div class="provider">Paramount+</div>
       <div class="provider">BBC iPlayer</div>
+      <div class="provider">ITVX</div>
+      <div class="provider">Channel 4</div>
       <div class="provider">and more…</div>
     </section>
 
@@ -320,7 +328,7 @@
       </div>
     </section>
 
-    <div class="how-title"><h2>New in v1.3.0: Catalogs</h2></div>
+    <div class="how-title"><h2>Catalogs &amp; Live TV</h2></div>
 
     <section class="catalog-rows">
       <div class="catalog-card">
@@ -333,7 +341,11 @@
       </div>
       <div class="catalog-card">
         <h3>📡 NitroVision TV</h3>
-        <p>A separate row just for public broadcaster catch-up — BBC iPlayer, ITVX, ABC iview and similar — so reality shows and live broadcast content don't get buried under the big commercial streamers.</p>
+        <p>A separate row just for public broadcaster catch-up — BBC iPlayer, ITVX, Channel 4, 5, S4C Clic and similar — so reality shows and live broadcast content don't get buried under the big commercial streamers.</p>
+      </div>
+      <div class="catalog-card live">
+        <h3>📡 NitroVision Live TV</h3>
+        <p>New: real, individual live channels — BBC One, BBC Two, ITV1, Channel 4, STV and more in the UK, plus free US news and FAST channels — each one linking straight to the broadcaster's own live player. Free public-broadcaster TV, no subscription needed.</p>
       </div>
     </section>
 
