@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Privacy — NitroVision</title>
+  <meta name="description" content="What NitroVision does and doesn't collect: no accounts, no tracking, anonymous feedback counts only.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #050816; color: #e4e4ee; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
+    .page { max-width: 820px; margin: auto; padding: 24px 20px 60px; }
+    a { color: #c4b5fd; }
+    a:focus-visible { outline: 3px solid #fcd34d; outline-offset: 3px; border-radius: 6px; }
+    .nav { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; font-size: 24px; font-weight: bold; margin-bottom: 28px; }
+    .nav img { width: 42px; height: 42px; }
+    h1 { font-size: 38px; line-height: 1.15; margin-bottom: 8px; color: #fff; }
+    .updated { color: #b8b8c8; margin-bottom: 28px; }
+    h2 { font-size: 23px; margin: 32px 0 10px; color: #fff; }
+    p, li { font-size: 17px; }
+    p + p { margin-top: 10px; }
+    ul { margin: 8px 0 0 22px; }
+    li + li { margin-top: 6px; }
+    .box { margin-top: 12px; padding: 16px 18px; border-radius: 14px; background: rgba(255, 255, 255, .05); border: 1px solid rgba(120, 110, 255, .35); }
+    footer { margin-top: 44px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, .12); color: #b8b8c8; font-size: 15px; }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <a class="nav" href="./"><img src="favicon.png" alt="">NitroVision</a>
+
+    <h1>Privacy</h1>
+    <p class="updated">Last updated: 3 November 2026</p>
+    <p>This notice covers the NitroVision website, the NitroVision Stremio add-on and the NitroVision TV app for Google TV and Android TV. In short, we don't know who you are, and we don't track what you do.</p>
+
+    <h2>Who runs NitroVision</h2>
+    <p>NitroVision is a free, independent hobby project run by one developer, known on GitHub as <a href="https://github.com/nitroxbs">nitroxbs</a>. It isn't a company. It isn't affiliated with Stremio, TMDB, JustWatch or any streaming service.</p>
+
+    <h2>What we don't collect</h2>
+    <ul>
+      <li>No accounts, so no names, emails or passwords.</li>
+      <li>No streaming logins. You sign in inside each service's own app, never in NitroVision.</li>
+      <li>No ads, no analytics and no tracking, on the website, in the add-on or in the app.</li>
+    </ul>
+
+    <h2>What's stored, and where</h2>
+    <p><strong>On your TV only.</strong> NitroVision TV keeps your profiles (names and pictures), your countries, services and live channels, your rows and their order, your background, your Watchlist and what you've recently opened. It's stored only on that TV and never sent to us. Uninstalling the app deletes it.</p>
+    <p><strong>In your Stremio install link.</strong> Your countries, services and rows are encoded in the add-on link you install in Stremio. The add-on reads them from each request to know what to show. It doesn't save them.</p>
+    <p><strong>Anonymous feedback counts.</strong> When you send a report from the website or the app's Report a problem button, we keep only the service, the title (if you chose one), what happened, the app version or "website", and the day. Reports are added up as counts in a private GitHub repository. There's no IP address, device detail or exact time in them. They're reviewed monthly and kept for 6 months at most.</p>
+    <div class="box">To stop the same sender flooding the form, the add-on briefly counts reports by a scrambled (hashed) form of the sender's IP address, using a secret that changes every day. That count is kept in memory only, is never written down or logged, and is forgotten after an hour.</div>
+
+    <h2>What other companies can see</h2>
+    <ul>
+      <li><strong>GitHub Pages</strong> hosts this website, and <strong>Beamup</strong> (with its Cloudflare network) hosts the add-on. Like any web server, they receive your IP address when you visit or when Stremio or the app contacts the add-on, under their own privacy policies.</li>
+      <li><strong>Images</strong> such as posters and logos come from TMDB's and GitHub's servers, so they see your IP address when your device loads them.</li>
+      <li><strong>TMDB and JustWatch</strong> are asked by our server what's available where. We send them titles and countries only, never anything about you.</li>
+      <li><strong>Streaming apps:</strong> once you press Play, the service's own app opens and its own privacy policy applies.</li>
+      <li><strong>Downloader</strong>, used to install the beta, is a separate app by AFTVnews with its own policy.</li>
+      <li><strong>YouTube:</strong> if trailers are added in a future version, playing one will be covered by YouTube's policy.</li>
+    </ul>
+
+    <h2>Your rights (UK and EU)</h2>
+    <p>Under UK GDPR and EU GDPR you can ask what personal data we hold about you, and ask us to correct or delete it, or to stop using it. Because we don't collect personal data, there's normally nothing to find. Your settings live on your own TV, and feedback counts can't be linked to you.</p>
+    <p>For privacy questions, open an issue on <a href="https://github.com/nitroxbs/nitrovision-website/issues">GitHub</a>. Issues there are public, so please don't include personal details. You also have the right to complain to your data protection authority (in the UK, the <a href="https://ico.org.uk/">ICO</a>).</p>
+
+    <h2>Children</h2>
+    <p>NitroVision isn't aimed at children, and we don't knowingly collect anything from them. A child profile in NitroVision TV exists only on that TV, like any other profile.</p>
+
+    <h2>Changes</h2>
+    <p>If this notice changes, we'll update it here and change the "Last updated" date at the top.</p>
+
+    <footer><a href="./">Back to NitroVision</a></footer>
+  </div>
+</body>
+
+</html>

@@ -5,14 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>NitroVision — Legal streaming guide for Stremio and Google TV</title>
-  <meta name="description" content="Browse Netflix, Prime Video, Disney+, BBC iPlayer and more by service, then press Play to watch in their own app. Free, no ads, no account. A Google TV app and a Stremio add-on.">
+  <meta name="description" content="Browse Netflix, Prime Video, Disney+, BBC iPlayer and more by service, then press Play to watch in each service's own app. Free, no ads, no account. A Google TV and Android TV app, and a Stremio add-on.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="NitroVision — Legal streaming guide for Stremio and Google TV">
-  <meta property="og:description" content="Everything on your streaming services. One place. No ads.">
+  <meta property="og:description" content="Watch everything on your streaming services. One place. No ads.">
   <meta property="og:url" content="https://nitroxbs.github.io/nitrovision-website/">
-  <meta property="og:image" content="https://raw.githubusercontent.com/nitroxbs/NitroVision-Logo/main/Nitro_Vision_Logo_noBG.png">
-  <meta name="twitter:card" content="summary">
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/nitroxbs/NitroVision-Logo/main/Nitro_Vision_Logo_noBG.png">
+  <meta property="og:image" content="https://nitroxbs.github.io/nitrovision-website/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="NitroVision: Watch everything on your streaming services. One place. No ads.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="favicon.png">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -54,7 +57,7 @@
     .btn {
       display: inline-flex; align-items: center; gap: 12px; padding: 16px 30px; border-radius: 40px; color: #fff;
       text-decoration: none; font-size: 19px; font-weight: bold; transition: transform .15s, box-shadow .15s;
-      background: linear-gradient(90deg, #9333ea, #4f6df5); border: 2px solid rgba(160, 130, 255, .6); box-shadow: 0 0 22px rgba(120, 80, 255, .5);
+      background: linear-gradient(90deg, #9333ea, #4f46e5); border: 2px solid rgba(160, 130, 255, .6); box-shadow: 0 0 22px rgba(120, 80, 255, .5);
     }
     .btn.plain { background: transparent; border-color: rgba(255, 255, 255, .35); box-shadow: none; }
     .btn:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(120, 80, 255, .7); }
@@ -119,6 +122,30 @@
     .dot.down { background: #f87171; }
     .legal { margin-top: 26px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, .12); font-size: 14px; line-height: 1.6; }
 
+    .available { display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; font-size: 17px; color: #d6d6e0; }
+    .available .icon { color: #a78bfa; }
+    .report select { font: inherit; font-size: 17px; color: #fff; background: #0d0d1f; border: 1px solid rgba(130, 110, 255, .45); border-radius: 10px; padding: 12px 14px; }
+    .report input::placeholder { color: #a0a0b4; }
+    .field-hint { font-size: 13px; color: #b8b8c8; }
+    .trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+    .timeline { list-style: none; font-size: 15px; line-height: 1.5; }
+    .timeline li { display: grid; grid-template-columns: 92px 70px 1fr; gap: 10px; align-items: baseline; }
+    .timeline li + li { margin-top: 10px; }
+    .timeline time { color: #b8b8c8; white-space: nowrap; }
+    .tag { font-size: 12px; font-weight: bold; text-align: center; padding: 2px 8px; border-radius: 10px; }
+    .tag.tv { color: #fde68a; background: rgba(245, 158, 11, .18); }
+    .tag.addon { color: #ddd6fe; background: rgba(139, 92, 246, .25); }
+
+    /* ---------- Accessibility ---------- */
+    a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-visible, textarea:focus-visible {
+      outline: 3px solid #fcd34d; outline-offset: 3px; border-radius: 8px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn { transition: none; }
+      .btn:hover { transform: none; }
+    }
+
     /* ---------- Mobile ---------- */
     @media (max-width: 900px) {
       .hero, .products, .footer-grid { grid-template-columns: 1fr; }
@@ -140,6 +167,7 @@
     <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/><path d="M3 3l18 18"/></symbol>
     <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><path d="M3 3l18 18"/></symbol>
     <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3z"/></symbol>
     <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
   </svg>
 
@@ -159,16 +187,17 @@
 
     <section class="hero">
       <div>
-        <h1>Everything on your streaming services. <span class="gradient">One place. No ads.</span></h1>
-        <p class="lead">Browse Netflix, Prime, Disney+, iPlayer and more by service, then press Play to watch in their own app. Plus free live TV.</p>
+        <h1>Watch everything on your streaming services. <span class="gradient">One place. No ads.</span></h1>
+        <p class="lead">Browse Netflix, Prime Video, Disney+, iPlayer and more by service, then press Play to watch in each service's own app. Plus free live TV.</p>
+        <p class="available"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>Available in 8 countries</p>
       </div>
       <div class="scene" role="img" aria-label="A TV showing NitroVision"></div>
     </section>
 
     <section class="products">
       <div class="product featured" id="tv-app">
-        <h2>NitroVision TV <span class="beta-tag">Beta 1.3.0</span></h2>
-        <p>The app for Google TV. No Stremio needed.</p>
+        <h2>NitroVision TV <span class="beta-tag">Beta 1.3.1</span></h2>
+        <p>Google TV App &amp; Android TV App</p>
         <a class="btn" href="nitrovision-tv.apk" download><svg class="icon"><use href="#i-download"/></svg>Get the app</a>
         <div class="dl-code">
           <strong>6963558</strong>
@@ -177,7 +206,7 @@
         <p class="small">Beta for Google TV and Android TV only, so expect bugs and changes. First time? Allow Downloader under Settings → Apps → Security &amp; restrictions → Unknown sources. Already on 1.1.0 or later? Use Settings → Check for updates in the app.</p>
       </div>
       <div class="product" id="addon">
-        <h2>Stremio add-on <span class="version-tag">v1.8.0</span></h2>
+        <h2>Stremio add-on <span class="version-tag">v1.9.0</span></h2>
         <p>Add NitroVision rows and links to Stremio on any device.</p>
         <a class="btn plain" href="https://b4c0be0d68c2-nitrovision-addon.baby-beamup.club/configure"><svg class="icon"><use href="#i-plug"/></svg>Configure and install</a>
         <p class="small" style="margin-top:18px">Pick your countries, services and rows, then install your personal link in Stremio. It takes about a minute.</p>
@@ -246,7 +275,7 @@
       </details>
       <details>
         <summary>Why does Netflix ask who's watching first?</summary>
-        <p>Netflix always asks which profile is watching when another app opens it. Pick your profile and Netflix goes on to the title you chose.</p>
+        <p>Netflix usually asks who's watching when another app opens it. Pick your profile and Netflix goes on to the title you chose.</p>
       </details>
       <details>
         <summary>How do I update or uninstall the beta?</summary>
@@ -257,13 +286,32 @@
     <div class="section-title" id="feedback"><h2>Feedback</h2></div>
     <section class="report">
       <p>Something didn't open properly? In NitroVision TV, press <b>Report a problem</b> on the title. Or tell us here.</p>
-      <form id="reportForm">
-        <label>Title<input name="title" maxlength="200" required placeholder="The Dark Knight"></label>
-        <label>Service<input name="service" maxlength="100" required placeholder="Netflix"></label>
-        <label class="wide">What happened?<textarea name="note" maxlength="300" placeholder="It opened the Netflix home page instead of the film."></textarea></label>
+      <form id="reportForm" novalidate>
+        <label for="rService">Service
+          <select id="rService" name="service" required><option value="">Choose a service</option></select>
+        </label>
+        <label for="rProblem">What happened?
+          <select id="rProblem" name="problem" required>
+            <option value="">Choose one</option>
+            <option>Opened the wrong page</option>
+            <option>App didn't open</option>
+            <option>Not actually on this service</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label for="rSearch">Find the title (optional)
+          <input id="rSearch" type="search" maxlength="60" autocomplete="off" placeholder="Type a few letters, then pick below" aria-describedby="rSearchHint">
+          <span id="rSearchHint" class="field-hint">Only the title you pick below is sent.</span>
+        </label>
+        <label for="rTitle">Title (optional)
+          <select id="rTitle" name="title"><option value="">No title</option></select>
+        </label>
+        <!-- A hidden field only bots fill in. -->
+        <div class="trap" aria-hidden="true"><label>Website<input name="website_url" tabindex="-1" autocomplete="off"></label></div>
         <button class="btn" type="submit">Send report</button>
-        <span id="reportStatus" role="status"></span>
+        <span id="reportStatus" role="status" aria-live="polite"></span>
       </form>
+      <p class="small" style="margin-top:16px">Reports only include what you choose here. We don't collect your name, email, IP address or device details.</p>
     </section>
   </div>
 
@@ -283,22 +331,24 @@
       <div class="footer-grid">
         <div>
           <h3>What's new</h3>
-          <ul>
-            <li><strong>TV Beta 1.3.0:</strong> a new home screen where each service shows its own Movies and TV Shows as you move across, landscape service logos, Recently Watched on top, 74 profile pictures, child profiles, background colours, smaller cards, automatic update checks, and a Link tester to fix links that open the wrong screen.</li>
-            <li><strong>Add-on v1.8.0:</strong> landscape logo tiles for every service.</li>
-            <li><strong>TV Beta 1.2.0:</strong> Report a problem button on every title and on Live TV.</li>
-            <li><strong>TV Beta 1.1.0:</strong> first-run setup, profiles, a new home screen, search, reorder rows and services, and in-app updates.</li>
-            <li><strong>Add-on v1.7.0:</strong> receives beta reports from the TV app.</li>
-            <li><strong>Add-on v1.6.0:</strong> NitroVision results on Stremio's search page.</li>
-            <li><strong>Add-on v1.5.0:</strong> pick your rows, with a Movies and a TV Shows row for every service you choose.</li>
-          </ul>
+          <ol class="timeline">
+            <li><time datetime="2026-11-03">3 Nov 2026</time><span class="tag addon">Add-on</span><span><strong>v1.9.0:</strong> anonymous feedback, with a new privacy notice.</span></li>
+            <li><time datetime="2026-11-03">3 Nov 2026</time><span class="tag tv">TV</span><span><strong>Beta 1.3.1:</strong> anonymous reports, and a privacy link in About.</span></li>
+            <li><time datetime="2026-11-03">3 Nov 2026</time><span class="tag tv">TV</span><span><strong>Beta 1.3.0:</strong> each service shows its own Movies and TV Shows as you move across; landscape logos, profile pictures, child profiles, backgrounds and automatic update checks.</span></li>
+            <li><time datetime="2026-11-03">3 Nov 2026</time><span class="tag addon">Add-on</span><span><strong>v1.8.0:</strong> landscape logo tiles for every service.</span></li>
+            <li><time datetime="2026-11-03">3 Nov 2026</time><span class="tag tv">TV</span><span><strong>Beta 1.2.0:</strong> a Report a problem button on titles and Live TV.</span></li>
+            <li><time datetime="2026-11-03">3 Nov 2026</time><span class="tag tv">TV</span><span><strong>Beta 1.1.0:</strong> setup, profiles, a new home screen, search and in-app updates.</span></li>
+            <li><time datetime="2026-11-03">3 Nov 2026</time><span class="tag addon">Add-on</span><span><strong>v1.6.0:</strong> NitroVision results on Stremio's search page.</span></li>
+            <li><time datetime="2026-11-03">3 Nov 2026</time><span class="tag addon">Add-on</span><span><strong>v1.5.0:</strong> pick your rows, with a Movies and a TV Shows row for every service.</span></li>
+          </ol>
         </div>
         <div>
           <h3>Help</h3>
           <ul>
             <li><a href="#feedback">Report a problem</a></li>
-            <li class="status"><span class="dot" id="statusDot"></span><span id="statusText">Checking add-on status…</span></li>
+            <li class="status"><span class="dot" id="statusDot" aria-hidden="true"></span><span id="statusText" role="status">Checking add-on status…</span></li>
             <li><a href="#faq">FAQ</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
           </ul>
         </div>
       </div>
@@ -313,8 +363,17 @@
   <script>
     var ADDON = "https://b4c0be0d68c2-nitrovision-addon.baby-beamup.club";
 
-    // Footer status: is the add-on answering, and which version.
-    fetch(ADDON + "/manifest.json?t=" + Date.now())
+    var LOADED = Date.now();
+
+    // fetch that gives up after a few seconds, so nothing waits forever.
+    function fetchWithin(url, ms, opts) {
+      var ctl = window.AbortController ? new AbortController() : null;
+      var timer = setTimeout(function () { if (ctl) ctl.abort(); }, ms);
+      return fetch(url, Object.assign({}, opts, ctl ? { signal: ctl.signal } : {})).finally(function () { clearTimeout(timer); });
+    }
+
+    // Footer status: is the add-on answering, and which version. Gives up after 8 seconds.
+    fetchWithin(ADDON + "/manifest.json?t=" + Date.now(), 8000)
       .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
       .then(function (m) {
         document.getElementById("statusDot").className = "dot up";
@@ -322,28 +381,57 @@
       })
       .catch(function () {
         document.getElementById("statusDot").className = "dot down";
-        document.getElementById("statusText").textContent = "Add-on not responding right now";
+        document.getElementById("statusText").textContent = "Add-on is down right now";
       });
 
-    // The web report form sends the same kind of report as the TV app's button.
+    // Report form: the services list comes from the add-on (the only values it accepts).
+    var serviceSelect = document.getElementById("rService");
+    function addOptions(select, values) {
+      values.forEach(function (v) { var o = document.createElement("option"); o.textContent = v; select.appendChild(o); });
+    }
+    fetchWithin(ADDON + "/feedback-options.json", 8000)
+      .then(function (r) { return r.json(); })
+      .then(function (o) { addOptions(serviceSelect, o.services); })
+      .catch(function () { addOptions(serviceSelect, ["Netflix", "Amazon Prime Video", "Disney+", "BBC iPlayer", "ITVX", "Channel 4", "Other"]); });
+
+    // Optional title: type to search, then pick one of the matches.
+    var search = document.getElementById("rSearch"), titleSelect = document.getElementById("rTitle"), searchTimer;
+    search.addEventListener("input", function () {
+      clearTimeout(searchTimer);
+      var q = search.value.trim();
+      if (q.length < 2) return;
+      searchTimer = setTimeout(function () {
+        fetchWithin(ADDON + "/titles.json?q=" + encodeURIComponent(q), 10000)
+          .then(function (r) { return r.json(); })
+          .then(function (o) {
+            titleSelect.length = 1;
+            addOptions(titleSelect, o.titles);
+            if (o.titles.length) titleSelect.selectedIndex = 1;
+          })
+          .catch(function () {});
+      }, 500);
+    });
+
     document.getElementById("reportForm").addEventListener("submit", function (e) {
       e.preventDefault();
       var form = e.target, status = document.getElementById("reportStatus");
+      if (!form.service.value || !form.problem.value) { status.textContent = "Choose a service and what happened first."; return; }
       var report = {
-        app: "website",
-        title: form.title.value.trim(),
-        service: form.service.value.trim(),
-        result: "Reported from the website",
-        note: form.note.value.trim()
+        source: "website",
+        service: form.service.value,
+        problem: form.problem.value,
+        title: form.title.value,
+        website_url: form.website_url.value,
+        elapsed: Date.now() - LOADED
       };
-      if (!report.title || !report.service) { status.textContent = "Add the title and the service first."; return; }
       status.textContent = "Sending…";
-      fetch(ADDON + "/feedback", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(report) })
+      fetchWithin(ADDON + "/feedback", 15000, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(report) })
         .then(function (r) {
           if (r.status === 429) throw new Error("busy");
           if (!r.ok) throw new Error();
           form.reset();
-          status.textContent = "Thanks, reported.";
+          titleSelect.length = 1;
+          status.textContent = "Thanks for the feedback";
         })
         .catch(function (err) {
           status.textContent = err.message === "busy" ? "Too many reports for now. Try again later." : "Couldn't send. Try again later.";
