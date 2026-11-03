@@ -243,6 +243,64 @@
       line-height: 28px;
     }
 
+    /* ---------- Countries ---------- */
+    .countries-intro { text-align: center; color: #d6d6e0; font-size: 18px; margin-top: 16px; }
+    .countries {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 16px 0 36px;
+    }
+    .country {
+      padding: 10px 18px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(120, 110, 255, .35);
+      font-size: 18px;
+      color: #e4e4ee;
+    }
+
+    /* ---------- NitroVision TV beta ---------- */
+    .beta {
+      margin-top: 20px;
+      padding: 30px 28px;
+      border-radius: 22px;
+      background: linear-gradient(160deg, rgba(245, 158, 11, .14), rgba(30, 20, 90, .35));
+      border: 1px solid rgba(245, 158, 11, .45);
+    }
+    .beta h3 { font-size: 28px; margin-bottom: 12px; }
+    .beta-tag {
+      display: inline-block;
+      font-size: 14px;
+      color: #fcd34d;
+      background: rgba(245, 158, 11, .15);
+      border: 1px solid rgba(245, 158, 11, .5);
+      padding: 3px 12px;
+      border-radius: 20px;
+      margin-left: 12px;
+      vertical-align: middle;
+    }
+    .beta p { color: #dcdcea; font-size: 18px; line-height: 1.5; margin-bottom: 14px; }
+    .beta .warning {
+      font-size: 16px;
+      color: #fde68a;
+      background: rgba(245, 158, 11, .1);
+      border-left: 3px solid #f59e0b;
+      padding: 12px 16px;
+    }
+    .beta ol { margin: 0 0 16px 24px; color: #dcdcea; font-size: 17px; line-height: 1.6; }
+    .beta code {
+      font-family: Consolas, monospace;
+      font-size: 16px;
+      color: #fcd34d;
+      background: rgba(0, 0, 0, .35);
+      padding: 2px 8px;
+      border-radius: 6px;
+      word-break: break-all;
+    }
+    .beta .install-btn { margin: 6px 0 18px; }
+
     /* ---------- Wave footer ---------- */
     .wave { display: block; width: 100%; height: 150px; margin-top: 40px; }
     footer { text-align: center; padding: 0 0 30px; color: #999; background: #0a0630; }
@@ -313,6 +371,19 @@
       <div class="provider">and more…</div>
     </section>
 
+    <div class="how-title"><h2>Where it works</h2></div>
+    <p class="countries-intro">NitroVision supports services and channels in these countries. If yours isn't listed, there's nothing for it to find yet.</p>
+    <section class="countries">
+      <div class="country">United States</div>
+      <div class="country">United Kingdom</div>
+      <div class="country">Canada</div>
+      <div class="country">Australia</div>
+      <div class="country">Ireland</div>
+      <div class="country">Germany</div>
+      <div class="country">France</div>
+      <div class="country">New Zealand</div>
+    </section>
+
     <section class="cards">
       <div class="card">
         <h3>Checks legal availability</h3>
@@ -359,8 +430,29 @@
 
     <div class="info">
       <div class="info-i">i</div>
-      <div>NitroVision is an add-on for Stremio and works only on devices with Stremio installed.</div>
+      <div>The NitroVision add-on works on any device with Stremio installed.</div>
     </div>
+
+    <div class="how-title"><h2>NitroVision TV</h2></div>
+
+    <section class="beta" id="tv-beta">
+      <h3>NitroVision TV for Google TV<span class="beta-tag">Beta 1.0.0</span></h3>
+      <p>A standalone NitroVision app for your TV: browse your NitroVision catalogue rows and Live TV with the remote, pick a title, and jump straight into the service's own app to watch.</p>
+      <p class="warning"><strong>This is a beta.</strong> It's an early test build for Google TV and Android TV devices only, and it isn't tested on phones, tablets or Fire TV. Expect bugs, rough edges and missing features. It may be unstable, and it may change or stop working without notice. Install it at your own risk.</p>
+      <p class="warning"><strong>UK only for now.</strong> This first beta is set up for UK services and live channels. Choosing your own country, services and rows is coming in a later beta.</p>
+      <a class="install-btn" href="nitrovision-tv.apk" download>
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>
+        Download Beta APK
+      </a>
+      <p><strong>Install it with Downloader:</strong></p>
+      <ol>
+        <li>On your Google TV, install the free <strong>Downloader</strong> app from the Play Store.</li>
+        <li>Allow it to install apps: Settings → Apps → Security &amp; restrictions → Unknown sources → turn on Downloader. (On some TVs you need to turn on Developer options first.)</li>
+        <li>Open Downloader and enter <code>https://nitroxbs.github.io/nitrovision-website/nitrovision-tv.apk</code></li>
+        <li>Choose Install when the download finishes, then open NitroVision TV from your apps.</li>
+      </ol>
+      <p>NitroVision TV is an independent app. It uses Stremio's open-source add-on protocol to load the NitroVision add-on, but it isn't made by, endorsed by or affiliated with Stremio. Like the add-on, it only links to legal services you already have.</p>
+    </section>
 
   </div>
 
