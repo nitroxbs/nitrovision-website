@@ -83,6 +83,14 @@
     .section-title::before, .section-title::after { content: ""; flex: 1; height: 2px; background: linear-gradient(90deg, #7c3aed, #38bdf8); }
     .center-note { text-align: center; color: #b8b8c8; font-size: 17px; margin-top: 14px; }
 
+    /* ---------- App screenshots ---------- */
+    .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .shots figure { margin: 0; }
+    .shots figure.wide { grid-column: 1 / -1; }
+    .shots img { display: block; width: 100%; height: auto; border-radius: 18px; border: 1px solid rgba(130, 110, 255, .35); box-shadow: 0 0 26px rgba(120, 80, 255, .25); }
+    .shots figcaption { color: #b8b8c8; font-size: 16px; margin-top: 10px; }
+    .shots figcaption strong { color: #fff; }
+
     /* ---------- Services and countries ---------- */
     .pills { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
     .pill { padding: 11px 20px; border-radius: 30px; background: rgba(255, 255, 255, .05); border: 1px solid rgba(120, 110, 255, .35); font-size: 18px; color: #e4e4ee; }
@@ -147,7 +155,7 @@
 
     /* ---------- Mobile ---------- */
     @media (max-width: 900px) {
-      .hero, .products, .footer-grid { grid-template-columns: 1fr; }
+      .hero, .products, .footer-grid, .shots { grid-template-columns: 1fr; }
       .scene { min-height: 260px; margin-top: 26px; border-radius: 20px; -webkit-mask-image: none; mask-image: none; }
       h1 { font-size: 38px; }
       .lead { font-size: 19px; }
@@ -210,6 +218,22 @@
         <a class="btn plain" href="https://b4c0be0d68c2-nitrovision-addon.baby-beamup.club/configure"><svg class="icon"><use href="#i-plug"/></svg>Configure and install</a>
         <p class="small" style="margin-top:18px">Pick your countries, services and rows, then install your personal link in Stremio. It takes about a minute.</p>
       </div>
+    </section>
+
+    <div class="section-title"><h2>Inside NitroVision TV</h2></div>
+    <section class="shots" aria-label="NitroVision TV screenshots">
+      <figure class="wide">
+        <img src="tv-home.jpg" width="1280" height="720" loading="lazy" alt="NitroVision TV Home: your services on the left, a top pick with Play, filters and a grid of titles, and free live TV below.">
+        <figcaption><strong>Home.</strong> Your services, a top pick, quick filters and what's on free TV, all on one screen.</figcaption>
+      </figure>
+      <figure>
+        <img src="tv-tonight.jpg" width="1280" height="720" loading="lazy" alt="New tonight: today's new episodes on your services, each with Watch now or Remind me.">
+        <figcaption><strong>New tonight.</strong> Today's new episodes on your services, with Watch now or a reminder.</figcaption>
+      </figure>
+      <figure>
+        <img src="tv-guide.jpg" width="1280" height="720" loading="lazy" alt="Live TV guide: channels down the side, programmes across a time grid, and a line showing the time now.">
+        <figcaption><strong>Live TV guide.</strong> Free channels with what's on now and next, favourites and reminders.</figcaption>
+      </figure>
     </section>
 
     <section class="trust" aria-label="What NitroVision promises">
