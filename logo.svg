@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B44CF5"/>
+      <stop offset="0.55" stop-color="#7C5CFA"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+    <mask id="eye">
+      <rect width="512" height="512" fill="#fff"/>
+      <path d="M100 256 C160 172 352 172 412 256 C352 340 160 340 100 256 Z" fill="#000"/>
+    </mask>
+  </defs>
+  <g mask="url(#eye)">
+    <path d="M74 444 V100 L188 68 L324 236 V100 L438 68 V412 L324 444 L188 276 V412 Z" fill="url(#g)" stroke="url(#g)" stroke-width="22" stroke-linejoin="round"/>
+  </g>
+  <path d="M124 256 C176 190 336 190 388 256 C336 322 176 322 124 256 Z" fill="none" stroke="url(#g)" stroke-width="15"/>
+  <circle cx="256" cy="256" r="46" fill="url(#g)"/>
+  <circle cx="272" cy="240" r="12" fill="#fff"/>
+</svg>
