@@ -43,7 +43,8 @@
     .reach { display: flex; align-items: center; gap: 10px; margin-top: 20px; font-size: 16px; color: #d6d6e0; }
     .reach .icon { color: #a78bfa; }
     .scene { margin: 0; }
-    .scene img { display: block; width: 100%; height: auto; border-radius: 16px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .08), 0 20px 60px rgba(90, 60, 220, .35); }
+    /* The hero picture fades into the page on every side instead of sitting on it as a card. */
+    .scene img { display: block; width: 100%; height: auto; -webkit-mask-image: radial-gradient(ellipse 58% 60% at 56% 42%, #000 45%, rgba(0, 0, 0, .6) 68%, rgba(0, 0, 0, .15) 88%, transparent 100%); mask-image: radial-gradient(ellipse 58% 60% at 56% 42%, #000 45%, rgba(0, 0, 0, .6) 68%, rgba(0, 0, 0, .15) 88%, transparent 100%); }
     .tv img { display: block; width: 100%; height: auto; border: 10px solid #0b0b12; border-radius: 14px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .12), 0 20px 60px rgba(90, 60, 220, .35); }
     .tv::after { content: ""; display: block; width: 26%; height: 12px; margin: 0 auto; background: linear-gradient(#1c1c28, #0b0b12); border-radius: 0 0 10px 10px; }
 
