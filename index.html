@@ -42,7 +42,8 @@
     .lead { font-size: 20px; line-height: 1.5; color: #e4e4ee; max-width: 540px; }
     .reach { display: flex; align-items: center; gap: 10px; margin-top: 20px; font-size: 16px; color: #d6d6e0; }
     .reach .icon { color: #a78bfa; }
-    .tv { margin: 0; }
+    .scene { margin: 0; }
+    .scene img { display: block; width: 100%; height: auto; border-radius: 16px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .08), 0 20px 60px rgba(90, 60, 220, .35); }
     .tv img { display: block; width: 100%; height: auto; border: 10px solid #0b0b12; border-radius: 14px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .12), 0 20px 60px rgba(90, 60, 220, .35); }
     .tv::after { content: ""; display: block; width: 26%; height: 12px; margin: 0 auto; background: linear-gradient(#1c1c28, #0b0b12); border-radius: 0 0 10px 10px; }
 
@@ -204,14 +205,14 @@
         <p class="lead">Browse Netflix, Prime Video, Disney+, iPlayer and more by service, then press Play to watch in each service's own app. Plus free live TV in the Stremio add-on.</p>
         <p class="reach"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>Stremio add-on: 8 countries · TV app beta: UK only</p>
       </div>
-      <figure class="tv">
-        <img src="tv-hero.jpg" width="1600" height="900" alt="NitroVision TV Home on a TV: your services across the top, a recommended film with a Play button, Movie Night, and rows of titles.">
+      <figure class="scene">
+        <img src="tv-hero.jpg" width="1600" height="900" alt="A family on a sofa in a dim living room, watching NitroVision TV: Home on the screen with a new film recommended, your services across the top and rows of titles below.">
       </figure>
     </section>
 
     <section class="products">
       <div class="product featured" id="tv-app">
-        <h2>NitroVision TV <span class="beta-tag">Beta 1.8.0</span></h2>
+        <h2>NitroVision TV <span class="beta-tag">Beta 1.8.1</span></h2>
         <p>For Google TV and Android TV. UK only during the beta.</p>
         <a class="btn" href="https://github.com/nitroxbs/nitrovision-website/releases/latest/download/nitrovision-tv.apk"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Get the app</a>
         <div class="dl-code">
@@ -221,7 +222,7 @@
         <p class="small">First time? See <a href="#install">How to install</a>.</p>
       </div>
       <div class="product" id="addon">
-        <h2>Stremio add-on <span class="version-tag">v1.13.0</span></h2>
+        <h2>Stremio add-on <span class="version-tag">v1.14.0</span></h2>
         <p>Add NitroVision rows and links to Stremio on any device.</p>
         <a class="btn plain" href="https://b4c0be0d68c2-nitrovision-addon.baby-beamup.club/configure"><svg class="icon" aria-hidden="true"><use href="#i-plug"/></svg>Configure and install</a>
         <p class="small" style="margin-top:18px">Pick your countries, services and rows, then install your personal link in Stremio. It takes about a minute.</p>
@@ -238,12 +239,12 @@
     <div class="section-title"><h2>Inside NitroVision TV</h2></div>
     <section class="shots" aria-label="NitroVision TV screenshots">
       <figure>
-        <img src="tv-kids.jpg" width="1280" height="720" loading="lazy" alt="Kids Home: a recommended film for a child's profile, Movie Night, and rows of children's films and shows.">
-        <figcaption><strong>Kids Home.</strong> Children's profiles get their own Home, with only children's titles.</figcaption>
+        <img src="tv-kids.jpg" width="1280" height="720" loading="lazy" alt="Kids Home: a cartoon series recommended for a child's profile, Movie Night with an animated film, and rows of children's films and shows.">
+        <figcaption><strong>Kids Home.</strong> Children's profiles get their own Home, with only titles rated U or PG.</figcaption>
       </figure>
       <figure>
-        <img src="tv-intro.jpg" width="1280" height="720" loading="lazy" alt="The Eye Opens intro: the NitroVision N with an eye opening in its centre, and the NitroVision name below.">
-        <figcaption><strong>Your intro.</strong> Five intros and 38 intro sounds to choose from in Settings → Sound.</figcaption>
+        <img src="tv-details.jpg" width="1280" height="720" loading="lazy" alt="A new film opened in NitroVision TV: its title, year and story, with Play, Watchlist and Like buttons and the service it opens in.">
+        <figcaption><strong>Pick a film.</strong> See what it is, then press Play to open it in your service's own app.</figcaption>
       </figure>
     </section>
 
@@ -377,9 +378,9 @@
         <div>
           <h3>What's new</h3>
           <ol class="timeline">
+            <li><span class="tag tv">APP</span><span><strong>Beta 1.8.1:</strong> Kids Home now only shows films and shows rated U or PG: mostly new and popular, with a few family classics from the 1980s.</span></li>
+            <li><span class="tag addon">Add-on</span><span><strong>v1.14.0:</strong> The kids' rows only include titles rated U or PG, and leave out crime, horror, thriller and war titles.</span></li>
             <li><span class="tag tv">APP</span><span><strong>Beta 1.8.0:</strong> A new Home screen with a recommended pick and Movie Night, a Kids Home for children's profiles, five intros and lots of new intro sounds, picture and sound quality on titles, a Continue watching page and a restyled Settings. The family list code now works from any phone connection. Live TV, the guide and New tonight have left the app; free live TV is still in the Stremio add-on.</span></li>
-<li><span class="tag addon">Add-on</span><span><strong>v1.13.0:</strong> Passes family list items from your phone to your TV. They're held in memory only until the TV collects them, and nothing about your phone is kept. See the Privacy page.</span></li>
-<li><span class="tag tv">APP</span><span><strong>Beta 1.7.0:</strong> A new Idle screen: famous paintings or space pictures when nobody's watching, with the time, the weather, today's plans, bin day and a family to-do list you add to from your phone. Also new app logos, and setup is UK only during the beta.</span></li>
           </ol>
           <a class="see-all" href="updates.html">See all updates →</a>
         </div>
