@@ -8,12 +8,12 @@
   <meta name="description" content="Browse Netflix, Prime Video, Disney+, BBC iPlayer and more by service, then press Play to watch in each service's own app. Free, no ads, no account. A Google TV and Android TV app, and a Stremio add-on.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="NitroVision — Legal streaming guide for Stremio and Google TV">
-  <meta property="og:description" content="Watch everything on your streaming services. One place. No ads.">
+  <meta property="og:description" content="Watch everything from your streaming services. One place. No ads.">
   <meta property="og:url" content="https://nitroxbs.github.io/nitrovision-website/">
   <meta property="og:image" content="https://nitroxbs.github.io/nitrovision-website/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="NitroVision: Watch everything on your streaming services. One place. No ads.">
+  <meta property="og:image:alt" content="NitroVision: Watch everything from your streaming services. One place. No ads.">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="logo.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -89,10 +89,23 @@
 
     /* ---------- Coming soon ---------- */
     .soon { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; padding: 22px; border-radius: 22px; background: rgba(255, 255, 255, .04); border: 1px solid rgba(120, 110, 255, .25); }
+    .soon + .shots { margin-top: 22px; }
     .soon img { display: block; width: 100%; height: auto; border-radius: 14px; }
     .soon h3 { font-size: 24px; margin: 12px 0 10px; }
     .soon p { color: #dcdcea; font-size: 17px; line-height: 1.55; }
     .soon p + p { margin-top: 10px; }
+    /* Family phone page: phones drawn in CSS (no maker's branding), the page's own background below each shot. */
+    .family { grid-template-columns: 1fr 1.25fr; margin-top: 22px; }
+    .phones { display: flex; justify-content: center; align-items: flex-end; gap: 16px; }
+    .phones figure { margin: 0; flex: 0 1 190px; }
+    .phones figure:nth-child(2) { transform: translateY(-18px); }
+    .phone { position: relative; aspect-ratio: 9 / 19.5; padding: 7px; border-radius: 34px; background: linear-gradient(145deg, #4a4a58, #1c1c24 45%, #3a3a46); box-shadow: 0 18px 40px rgba(0, 0, 0, .5), inset 0 0 0 1px rgba(255, 255, 255, .12); }
+    .phone::before { content: ""; position: absolute; right: -3px; top: 26%; width: 3px; height: 14%; border-radius: 0 2px 2px 0; background: #3a3a46; }
+    .phone::after { content: ""; position: absolute; left: -3px; top: 20%; width: 3px; height: 16%; border-radius: 2px 0 0 2px; background: #3a3a46; }
+    .phone .screen { height: 100%; border-radius: 27px; overflow: hidden; background: #12121c; position: relative; }
+    .phone .screen::before { content: ""; position: absolute; top: 7px; left: 50%; transform: translateX(-50%); width: 30%; height: 16px; border-radius: 10px; background: #000; }
+    .phone img { display: block; width: 100%; height: auto; padding-top: 28px; }
+    .phones figcaption { text-align: center; color: #b8b8c8; font-size: 14px; margin-top: 10px; }
 
     /* ---------- Where it works ---------- */
     .where { max-width: 920px; margin: 0 auto; display: grid; gap: 22px; }
@@ -202,8 +215,8 @@
 
     <section class="hero">
       <div>
-        <h1>Watch everything on your streaming services. <span class="gradient">One place. No ads.</span></h1>
-        <p class="lead">Browse Netflix, Prime Video, Disney+, iPlayer and more by service, then press Play to watch in each service's own app. Plus free live TV in the Stremio add-on.</p>
+        <h1>Watch everything from your streaming services. <span class="gradient">One place. No ads.</span></h1>
+        <p class="lead">Browse Netflix, Prime Video, Disney+, iPlayer and more side by side, then press Play to watch in that service's own app. The Stremio add-on adds free live TV too.</p>
         <p class="reach"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>Stremio add-on: 8 countries · TV app beta: UK only</p>
       </div>
       <figure class="scene">
@@ -213,7 +226,7 @@
 
     <section class="products">
       <div class="product featured" id="tv-app">
-        <h2>NitroVision TV <span class="beta-tag">Beta 1.8.2</span></h2>
+        <h2>NitroVision TV <span class="beta-tag">Beta 1.9.0</span></h2>
         <p>For Google TV and Android TV. UK only during the beta.</p>
         <a class="btn" href="https://github.com/nitroxbs/nitrovision-website/releases/latest/download/nitrovision-tv.apk"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Get the app</a>
         <div class="dl-code">
@@ -223,7 +236,7 @@
         <p class="small">First time? See <a href="#install">How to install</a>.</p>
       </div>
       <div class="product" id="addon">
-        <h2>Stremio add-on <span class="version-tag">v1.15.0</span></h2>
+        <h2>Stremio add-on <span class="version-tag">v1.16.0</span></h2>
         <p>Finds where to watch the film or show you pick in Stremio, on the streaming services you already subscribe to, and opens it there in one click. Choose your services and build your own catalogues, then change them any time.</p>
         <a class="btn plain" href="https://b4c0be0d68c2-nitrovision-addon.baby-beamup.club/configure"><svg class="icon" aria-hidden="true"><use href="#i-plug"/></svg>Configure and install</a>
         <p class="small" style="margin-top:18px">Pick your countries, services and rows, then install your personal link in Stremio. It takes about a minute.</p>
@@ -238,7 +251,16 @@
     </section>
 
     <div class="section-title"><h2>Inside NitroVision TV</h2></div>
-    <section class="shots" aria-label="NitroVision TV screenshots">
+    <section class="soon">
+      <img src="tv-idle.jpg" width="1280" height="720" loading="lazy" alt="The Idle screen: a painting fills the TV, with the time, weather, today's plans, bin day and a family to-do list with a QR code and its 4-digit code down the right.">
+      <div>
+        <span class="soon-tag">New in the TV app · Beta 1.7.0</span>
+        <h3>An Idle screen for your TV</h3>
+        <p>When nobody's watching, NitroVision TV shows a famous painting or a space picture, with the time, the weather, today's plans, bin day and a family to-do list beside it. Turn it on and choose what it shows in Settings → Idle screen.</p>
+        <p>Add to-dos and family events by scanning the code with your phone. No sign-ins: what you add waits on NitroVision's server until your TV collects it (an hour at most), and the list itself stays on your TV. Free, like the rest of the app.</p>
+      </div>
+    </section>
+    <section class="shots" aria-label="More NitroVision TV screenshots">
       <figure>
         <img src="tv-kids.jpg" width="1280" height="720" loading="lazy" alt="Kids Home: a cartoon series recommended for a child's profile, Movie Night with an animated film, and rows of children's films and shows.">
         <figcaption><strong>Kids Home.</strong> Children's profiles get their own Home, with only titles rated U or PG.</figcaption>
@@ -248,15 +270,17 @@
         <figcaption><strong>Pick a film.</strong> See what it is, then press Play to open it in your service's own app.</figcaption>
       </figure>
     </section>
-
-    <div class="section-title"><h2>New in the app</h2></div>
-    <section class="soon">
-      <img src="tv-idle.jpg" width="1280" height="720" loading="lazy" alt="The Idle screen: a painting fills the TV, with the time, weather, today's plans, bin day and a family to-do list with a QR code and its 4-digit code down the right.">
+    <section class="soon family" aria-label="The family phone page">
       <div>
-        <span class="soon-tag">New in Beta 1.7.0</span>
-        <h3>An Idle screen for your TV</h3>
-        <p>When nobody's watching, NitroVision TV shows a famous painting or a space picture, with the time, the weather, today's plans, bin day and a family to-do list beside it. Turn it on and choose what it shows in Settings → Idle screen.</p>
-        <p>Add to-dos and family events by scanning the code with your phone. No sign-ins: what you add waits on NitroVision's server until your TV collects it (an hour at most), and the list itself stays on your TV. Free, like the rest of the app.</p>
+        <span class="soon-tag">New in the TV app</span>
+        <h3>Your family's phones, no app needed</h3>
+        <p>Scan the QR code on the TV with your phone's camera and a simple page opens. Add an event, add to the family to-do list or change the name the TV greets you with. A parent can type the parent PIN there too, so nobody sees it on screen.</p>
+        <p>There's nothing to download and no sign-in. It only works with the 4-digit code your TV shows, nothing about your phone is kept, and the list lives on your TV.</p>
+      </div>
+      <div class="phones">
+        <figure><div class="phone"><div class="screen"><img src="phone-ask.png" width="780" height="1200" loading="lazy" alt="The phone page asking what you'd like to do: add an event, add to the to-do list or change the family name."></div></div><figcaption>Pick a task</figcaption></figure>
+        <figure><div class="phone"><div class="screen"><img src="phone-event.png" width="780" height="1200" loading="lazy" alt="Adding an event on the phone: a day, a time, what it is and who it's for."></div></div><figcaption>Add an event</figcaption></figure>
+        <figure><div class="phone"><div class="screen"><img src="phone-pin.png" width="780" height="1200" loading="lazy" alt="The phone page asking for the parent PIN, which the TV then checks."></div></div><figcaption>Parent PIN</figcaption></figure>
       </div>
     </section>
 
@@ -379,9 +403,9 @@
         <div>
           <h3>What's new</h3>
           <ol class="timeline">
+            <li><span class="tag tv">APP</span><span><strong>Beta 1.9.0:</strong> Parental controls, Daily time limit, App tour</span></li>
+            <li><span class="tag addon">Add-on</span><span><strong>v1.16.0:</strong> Family phone page update, Age limits</span></li>
             <li><span class="tag tv">APP</span><span><strong>Beta 1.8.2:</strong> Trailers, Voice search, Button and menu edits</span></li>
-            <li><span class="tag addon">Add-on</span><span><strong>v1.15.0:</strong> Family page update, Trailer support</span></li>
-            <li><span class="tag addon">Add-on</span><span><strong>v1.14.2:</strong> Usage stats page update</span></li>
           </ol>
           <a class="see-all" href="updates.html">See all updates →</a>
         </div>
