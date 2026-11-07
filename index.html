@@ -57,6 +57,7 @@ footer h3{color:#fff}.linklike{background:none;border:0;color:inherit;font:inher
     .timeline li + li { margin-top: 10px; }
     .tag { font-size: 12px; font-weight: bold; text-align: center; padding: 2px 8px; border-radius: 10px; }
     .tag.tv { color: #fde68a; background: rgba(245, 158, 11, .18); }
+    .tag.web { color: #a7f3d0; background: rgba(16, 185, 129, .2); }
     .tag.addon { color: #ddd6fe; background: rgba(139, 92, 246, .25); }
     .see-all { display: inline-block; margin-top: 14px; color: #c4b5fd; font-size: 15px; }
     .status { display: inline-flex; align-items: center; gap: 8px; }
@@ -186,9 +187,9 @@ var pk=document.getElementById("peek");document.querySelectorAll(".rows li").for
         <div>
           <h3>What's new</h3>
           <ol class="timeline">
+            <li><span class="tag web">Website</span><span><strong>Website update:</strong> Clearer layout, Install help</span></li>
             <li><span class="tag tv">APP</span><span><strong>Beta 1.10.1:</strong> Kids safety update</span></li>
             <li><span class="tag tv">APP</span><span><strong>Beta 1.10.0:</strong> Live TV guide, Free channels player</span></li>
-            <li><span class="tag addon">Add-on</span><span><strong>v1.19.0:</strong> Live channels data</span></li>
           </ol>
           <a class="see-all" href="updates.html">See all updates →</a>
         </div>
