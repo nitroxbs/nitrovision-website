@@ -96,15 +96,18 @@
     .soon p + p { margin-top: 10px; }
     /* Family phone page: phones drawn in CSS (no maker's branding), the page's own background below each shot. */
     .family { grid-template-columns: 1fr 1.25fr; margin-top: 22px; }
-    .phones { display: flex; justify-content: center; align-items: flex-end; gap: 16px; }
-    .phones figure { margin: 0; flex: 0 1 190px; }
-    .phones figure:nth-child(2) { transform: translateY(-18px); }
-    .phone { position: relative; aspect-ratio: 9 / 19.5; padding: 7px; border-radius: 34px; background: linear-gradient(145deg, #4a4a58, #1c1c24 45%, #3a3a46); box-shadow: 0 18px 40px rgba(0, 0, 0, .5), inset 0 0 0 1px rgba(255, 255, 255, .12); }
-    .phone::before { content: ""; position: absolute; right: -3px; top: 26%; width: 3px; height: 14%; border-radius: 0 2px 2px 0; background: #3a3a46; }
-    .phone::after { content: ""; position: absolute; left: -3px; top: 20%; width: 3px; height: 16%; border-radius: 2px 0 0 2px; background: #3a3a46; }
-    .phone .screen { height: 100%; border-radius: 27px; overflow: hidden; background: #12121c; position: relative; }
-    .phone .screen::before { content: ""; position: absolute; top: 7px; left: 50%; transform: translateX(-50%); width: 30%; height: 16px; border-radius: 10px; background: #000; }
-    .phone img { display: block; width: 100%; height: auto; padding-top: 28px; }
+    .phones { display: flex; justify-content: center; align-items: center; }
+    .phones figure { margin: 0; width: min(270px, 70vw); }
+    .phone { position: relative; aspect-ratio: 1 / 2.16; padding: 7px; border-radius: 50px; background: linear-gradient(145deg, #c9c4bb 0%, #7d7a75 18%, #54524f 50%, #8f8b85 82%, #c3beb5 100%); box-shadow: 0 26px 50px rgba(0, 0, 0, .55), 0 0 0 1px rgba(0, 0, 0, .6), inset 0 0 0 1px rgba(255, 255, 255, .35); }
+    .phone .screen { height: 100%; border-radius: 43px; overflow: hidden; background: #0e0e17; position: relative; box-shadow: 0 0 0 3px #000; }
+    .phone .screen::before { content: ""; position: absolute; top: 11px; left: 50%; transform: translateX(-50%); width: 30%; height: 24px; border-radius: 14px; background: #000; z-index: 2; }
+    .phone .screen::after { content: ""; position: absolute; bottom: 9px; left: 50%; transform: translateX(-50%); width: 34%; height: 5px; border-radius: 3px; background: rgba(255, 255, 255, .75); z-index: 2; }
+    .phone img { display: block; width: 100%; height: auto; padding-top: 48px; }
+    .phone .btn { position: absolute; width: 3px; border-radius: 2px; background: #6d6a65; }
+    .phone .btn.action { left: -3px; top: 13%; height: 3.5%; }
+    .phone .btn.up { left: -3px; top: 19%; height: 6.5%; }
+    .phone .btn.down { left: -3px; top: 27%; height: 6.5%; }
+    .phone .btn.power { right: -3px; top: 23%; height: 10%; }
     .phones figcaption { text-align: center; color: #b8b8c8; font-size: 14px; margin-top: 10px; }
 
     /* ---------- Where it works ---------- */
@@ -220,7 +223,7 @@
         <p class="reach"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>Stremio add-on: 8 countries · TV app beta: UK only</p>
       </div>
       <figure class="scene">
-        <img src="tv-hero.jpg" width="960" height="1130" alt="A living room in the evening: a TV showing NitroVision TV Home, with a new film recommended and your services across the top, seen from a blue sofa.">
+        <img src="tv-hero.jpg" width="960" height="1130" alt="A living room in the evening: a TV showing NitroVision TV Home, with rows of films and shows, Movie Night, a recommended film and a Live TV tile, seen from a blue sofa.">
       </figure>
     </section>
 
@@ -260,11 +263,25 @@
         <p>Add to-dos and family events by scanning the code with your phone. No sign-ins: what you add waits on NitroVision's server until your TV collects it (an hour at most), and the list itself stays on your TV. Free, like the rest of the app.</p>
       </div>
     </section>
+    <section class="soon">
+      <img src="tv-live.jpg" width="1280" height="720" loading="lazy" alt="The Live TV guide: tabs for News, Movies, Entertainment, Science and Music, a time grid of what is on now and next, a Watch live button and a favourites heart.">
+      <div>
+        <span class="soon-tag">New in the TV app · Beta 1.10.0</span>
+        <h3>Live TV, right inside the app</h3>
+        <p>A Live TV tile on Home shows three free channels that are on now. Open the guide for every channel in tabs, with what's on now and next, then press OK and it plays full screen inside NitroVision. No other app opens.</p>
+        <p>Press Up or Down to change channel, OK for a mini guide, and hold OK to add a favourite so it shows first. Channels with no listing show what they're live with right now. It's free, with no account, and it never shows on children's profiles.</p>
+      </div>
+    </section>
+    <section class="soon">
+      <img src="tv-builder.jpg" width="1280" height="720" loading="lazy" alt="Build your family tile: type your family name, pick a colour and a style, then choose a pack of characters. A preview shows the tile.">
+      <div>
+        <span class="soon-tag">New in the TV app</span>
+        <h3>Build your family tile</h3>
+        <p>Give your family a tile that takes pride of place at the top of every screen. Type your family name, pick a colour, choose solid or gradient, then add a family of characters from five packs: Fun, Cool, Fresh, Chill and Halloween.</p>
+        <p>Find it in Settings. When you press Let's go, the tile grows with a sparkle, the family hops, and it shrinks to its place on Home.</p>
+      </div>
+    </section>
     <section class="shots" aria-label="More NitroVision TV screenshots">
-      <figure>
-        <img src="tv-live.jpg" width="1280" height="720" loading="lazy" alt="The Live TV guide: free channels in tabs, what is on now and next in a time grid, with a Watch live button and a favourites heart.">
-        <figcaption><strong>Live TV.</strong> Free channels that play right inside the app, with what is on now and next.</figcaption>
-      </figure>
       <figure>
         <img src="tv-kids.jpg" width="1280" height="720" loading="lazy" alt="Kids Home: a cartoon series recommended for a child's profile, Movie Night with an animated film, and rows of children's films and shows.">
         <figcaption><strong>Kids Home.</strong> Children's profiles get their own Home, with only titles rated U or PG.</figcaption>
@@ -282,9 +299,7 @@
         <p>There's nothing to download and no sign-in. It only works with the 4-digit code your TV shows, nothing about your phone is kept, and the list lives on your TV.</p>
       </div>
       <div class="phones">
-        <figure><div class="phone"><div class="screen"><img src="phone-ask.png" width="780" height="1200" loading="lazy" alt="The phone page asking what you'd like to do: add an event, add to the to-do list or change the family name."></div></div><figcaption>Pick a task</figcaption></figure>
-        <figure><div class="phone"><div class="screen"><img src="phone-event.png" width="780" height="1200" loading="lazy" alt="Adding an event on the phone: a day, a time, what it is and who it's for."></div></div><figcaption>Add an event</figcaption></figure>
-        <figure><div class="phone"><div class="screen"><img src="phone-pin.png" width="780" height="1200" loading="lazy" alt="The phone page asking for the parent PIN, which the TV then checks."></div></div><figcaption>Parent PIN</figcaption></figure>
+        <figure><div class="phone"><span class="btn action"></span><span class="btn up"></span><span class="btn down"></span><span class="btn power"></span><div class="screen"><img src="phone-ask.png" width="780" height="1200" loading="lazy" alt="The family phone page on a phone: add an event, add to the to-do list or change the family name."></div></div><figcaption>The family page on your phone</figcaption></figure>
       </div>
     </section>
 
