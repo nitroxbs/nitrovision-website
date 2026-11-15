@@ -563,10 +563,10 @@ function upd(){
   inL.style.opacity=inn;inL.style.visibility=inn>0?"visible":"hidden";inL.style.pointerEvents=inn>.5?"":"none";
   tv.style.visibility=(inn>=1||t>=LS-.05)?"hidden":"";
   scenes.forEach(function(s,i){
-    var p=t-1-i,a=i?clamp((p-.04)/.16):1,o=i<N-1?clamp((p-.82)/.16):0,op=a*(1-o);
+    var p=t-1-i,a=i?clamp((p+.3)/.35):1,o=i<N-1?clamp((p-.55)/.35):0,op=a*(1-o);
     s.style.opacity=op;s.style.visibility=op>0?"visible":"hidden";
     s.style.setProperty("--a",a);s.style.setProperty("--o",o);
-    bgs[i].style.opacity=op;
+    bgs[i].style.opacity=Math.max(op,i===Math.min(N-1,Math.max(0,Math.round(t-1)))?.35:0);
   });
   los.forEach(function(s,k){
     var p=t-LS-k,a=clamp(p/.2),o=k<M-1?clamp((p-.8)/.16):0,op=a*(1-o);
