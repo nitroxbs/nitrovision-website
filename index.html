@@ -558,7 +558,7 @@ function upd(){
   stage.style.setProperty("--io",io);stage.style.setProperty("--e",e);
   fades.forEach(function(el){el.style.visibility=io>0?"":"hidden"});
   var inn=clamp((e-.82)/.18);
-  inL.style.opacity=inn;inL.style.visibility=inn>0?"visible":"hidden";
+  inL.style.opacity=inn;inL.style.visibility=inn>0?"visible":"hidden";inL.style.pointerEvents=inn>.5?"":"none";
   tv.style.visibility=(inn>=1||t>=LS-.05)?"hidden":"";
   scenes.forEach(function(s,i){
     var p=t-1-i,a=i?clamp((p-.04)/.16):1,o=i<N-1?clamp((p-.82)/.16):0,op=a*(1-o);
